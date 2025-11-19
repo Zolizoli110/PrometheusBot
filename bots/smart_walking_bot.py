@@ -6,7 +6,7 @@ EMPTY = -1
 BLOCKED = -2
 
 
-class WalkingBot(BaseBot):
+class SmartWalkingBot(BaseBot):
     def __init__(self, uid: int):
         super().__init__(uid)
         self.cols = 0
@@ -30,6 +30,12 @@ class WalkingBot(BaseBot):
 
         # No EMPTY cell found (board full or corrupted)
         return 0, 0
+
+    def attack() :
+        raise NotImplementedError
+    
+    def defense():
+        raise NotImplementedError
 
     def notify_move(self, bot_uid: int, move: Tuple[int, int]) -> None:
         x, y = move
